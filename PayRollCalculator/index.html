@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Payroll</title>
+  </head>
+
+  <body>
+    
+    <header>
+      <div class="header-box">
+        <h1>The IT Crew</h1>
+      </div>
+    </header>
+
+    <div class="main">
+      <form
+        id="form"
+        class="form"
+        onsubmit="event.preventDefault();updateAllValues();"
+      >
+        <h1>
+          Payroll Report For <br />
+          The IT Crew
+        </h1>
+        <div class="input_container">
+          <div class="tooltip">
+            <label for="hourly_rate">Hourly Rate:</label>
+            <input
+              type="number"
+              class="input"
+              id="hourly_rate"
+              min="10"
+              max="50"
+              placeholder="$10"
+              maxlength="2"
+              required
+            />
+          </div>
+
+          <div>
+            <label for="hours">Hours:</label>
+            <input
+              type="number"
+              class="input"
+              id="hours"
+              min="20"
+              max="60"
+              placeholder="20"
+              maxlength="2"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="output-box">
+          <ul>
+            <li>
+              <div>
+                <span>Gross Pay</span>
+                <output id="Gross_Pay"></output>
+              </div>
+            </li>
+            <li>
+              <div>
+                <span>Over Time</span>
+                <output id="overTime"></output>
+              </div>
+            </li>
+            <li>
+              <div>
+                <span>Deductions</span>
+                <output id="Deduction"></output>
+              </div>
+            </li>
+            <li>
+              <div>
+                <span>Total Pay</span>
+                <output id="total_pay"></output>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <button type="submit" id="submit">Submit</button>
+      </form>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
